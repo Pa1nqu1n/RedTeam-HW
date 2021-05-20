@@ -1,0 +1,75 @@
+GoodSecurity Penetration Test Report
+ 
+AlecGautreaux@GoodSecurity.com
+ 
+4/24/2021
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1. High-Level Summary
+ 
+GoodSecurity was tasked with performing an internal penetration test on GoodCorp’s CEO, Hans Gruber. An internal penetration test is a dedicated attack against internally connected systems. The goal of this test is to perform attacks similar to those of a hacker and attempt to infiltrate Hans’ computer to determine if it is at risk. GoodSecurity’s overall objective was to exploit any vulnerable software, find a secret recipe file on Hans’ computer, and report the findings back to GoodCorp.
+The internal penetration test found several alarming vulnerabilities on Hans’ computer: When performing the attacks, GoodSecurity was able to gain access to his machine and find the secret recipe file by exploiting two programs with major vulnerabilities. The details of the attack are below.
+
+2. Findings
+ 
+Machine IP:
+192.168.0.20
+
+Hostname:
+MSEDGEWIN10
+
+Vulnerability Exploited:
+0 exploit/windows/http/icecast_ header
+
+Vulnerability Explanation:
+ It's a buffer overflow that uses the ExitTheard() making it think that the thread is still in use. Meaning everytime the payload exits it will be left incremented and it eventually cause threadpool limit to hit maxed out. Which means you multi hit till you fill up the theardpool.
+Explain the vulnerability as best you can by explaining the attack type (i.e. is it a heap overflow attack, buffer overflow, file inclusion, etc.) and briefly summarize what that attack is. You may need to do extra research online. 
+
+Severity: 
+Serious should be handled quickly.
+
+Proof of Concept:
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
